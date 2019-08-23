@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.xinpi.dao.StreetDao">
+
+    <!--    <resultMap type="com.xinpi.entity.StreetEntity" id="StreetEntity">-->
+    <!--        <id column="id" property="id" javaType="java.lang.Integer" jdbcType="NUMERIC"/>-->
+    <!--        <id column="code" property="code" javaType="java.lang.String" jdbcType="VARCHAR"/>-->
+    <!--        <id column="name" property="name" javaType="java.lang.String" jdbcType="VARCHAR"/>-->
+    <!--        <id column="city_code" property="cityCode" javaType="java.lang.String" jdbcType="VARCHAR"/>-->
+    <!--        <id column="province_code" property="provinceCode" javaType="java.lang.String" jdbcType="VARCHAR"/>-->
+    <!--        <id column="location" property="location" javaType="java.lang.String" jdbcType="VARCHAR"/>-->
+    <!--    </resultMap>-->
+
+
+    <select id="selectAll" resultType="com.xinpi.entity.StreetEntity">
+        select * from  street
+    </select>
+    <select id="selectByParams" resultType="com.xinpi.entity.StreetEntity"
+            parameterType="com.xinpi.entity.StreetEntity">
+        select * from street
+        <where>
+            <if test="name!=null and name != ''">
+                and name like "%"#{name}"%"
+            </if>
+        </where>
+    </select>
+
+</mapper>

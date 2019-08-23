@@ -1,0 +1,25 @@
+package com.xinpi.service;
+
+import java.awt.image.BufferedImage;
+
+/**
+ * 类 名 称：SysCaptchaService
+ * 类 描 述：TODO
+ * 创建时间：2019-08-06 09:53
+ * 创 建 人：renhao
+ */
+public interface SysCaptchaService {
+
+    /**
+     * 获取图片验证码
+     */
+    BufferedImage getCaptcha(String uuid);
+
+    /**
+     * 验证码效验
+     * @param uuid  uuid
+     * @param code  验证码
+     * @return  true：成功  false：失败
+     */
+    boolean validate(String uuid, String code);
+}

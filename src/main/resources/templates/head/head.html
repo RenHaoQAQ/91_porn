@@ -1,0 +1,28 @@
+<div class="wrap">
+    <!--header-->
+    <div class="header">
+        <!--start-logo-->
+        <div class="logo">
+            <a href="index.html"><h1>jet<span>ro</span></h1></a>
+        </div>
+        <!--end-logo-->
+        <!--start-menu-->
+        <div class="menu">
+            <a class="toggleMenu" href="#"><img th:src="@{/images/nav.png}" alt= " " /></a>
+            <ul class="nav">
+                <li class="active"><a href="index.html">首页</a></li>
+                <li ><a th:href="@{about.html}">关于我们</a></li>
+                <li><a th:href="@{/blog.html}">漫画</a></li>
+                <li><a th:href="@{/portfolio.html}">视屏</a></li>
+                <li><a th:href="@{/contact.html}">联系我</a></li>
+                <li><a th:href="@{/logout}">退出系统</a></li>
+                <div class="clear"> </div>
+            </ul>
+            <script type="text/javascript" th:src="@{/js/responsive-nav.js}"></script>
+        </div>
+        <div class="clear"> </div>
+        <!--end-menu-->
+
+
+    </div>
+</div>
